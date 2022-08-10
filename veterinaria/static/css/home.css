@@ -154,7 +154,7 @@ a{
 /* Header section */
 /* Hero  */
 #hero {
-	background-image: url("../img/fondo5.jpg");
+	/*background-image: url("../img/fondo5.jpg");*/
 	background-size: cover;
 	background-position: top center;
 	position: relative;
@@ -177,7 +177,54 @@ a{
 	padding: 0 50px;
 	justify-content: center;
 }
+#hero h1 {
+	display: block;
+	width: fit-content;
+	font-size: 10rem;
+	position: relative;
+	color: transparent;
+    animation: text_reveal 0.5s ease forwards;
+    animation-delay: 1.5s;
+}
 
+#hero h1:nth-child(1) {
+	animation-delay: 1s;
+}
+
+
+
+#hero h1 span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 0;
+	background-color: rgb(54, 110, 230);
+	animation: text_reveal_box 1s ease;
+	animation-delay: 3s;
+}
+#hero h1:nth-child(1) span {
+	animation-delay: 0.5s;
+}
+
+#hero .cta{
+    display: inline-block;
+    padding: 10px 30px;
+    
+    color: white;
+    background-color: transparent;
+    border: 2px solid rgb(54, 110, 230);
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    transition: .3s ease background-color;
+    
+}
+#hero .cta:hover {
+    color: white;
+    background-color: rgb(54, 110, 230);
+}
 
 /* final Hero  */
 
@@ -555,4 +602,81 @@ a{
 		margin-left: 0;
 	}
 
+}
+
+#section .tarjetas{
+    height: 100%;
+    display: grid;
+    place-items: center;
+    background: #f2f2f2;
+    text-align: center;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card{
+    height: 290px;
+    width: 350px;
+    margin: 0 20px;
+    background: white;
+    transition: 0.4s;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.card:hover{
+    height: 470px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.card .img{
+    height: 200px;
+    width: 100%;
+}
+.card .img img{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;    
+}
+.card .top-text{
+    padding: 5px;
+}
+.card .top-text .name{
+    font-size: 25px;
+    font-weight: 600;
+    color: #202020;
+    text-align: center;
+}
+.card .top-text p{
+    font-size: 20px;
+    font-weight: 600;
+    color: #e74c3c;
+    line-height: 20px;
+    text-align: center;
+
+}
+.card .bottom-text{
+    padding: 0 20px 10px 20px;
+    margin-top: 5px;
+    background: white;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.1s;
+}
+.card:hover .bottom-text{
+    opacity: 1;
+    visibility: visible;
+}
+.card .bottom-text .text{
+    text-align: center;
+}
+@media screen and (max-width: 978px){
+    .container{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .card{
+        max-width: 700px;
+        margin: 20px 0;
+    }
 }

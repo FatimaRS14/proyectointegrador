@@ -1,8 +1,38 @@
 {% extends 'base.html' %}
+
+
 {% block hero %}
 
+<section id="hero" style="background-image: url('../static/img/serviciosss.jpg')">
+    <div class="hero container">
+        <h1>Productos<span></span></h1>
+      
+    </div>
+  </section>
+<section>
+<h1>Contamos con una amplia variedad de productos para cada uno de los diferentes casos</h1>
+    {% for producto in productos %}
+<h1>
+    <h1>
+    <p>{{ producto.nombre}}</p>
+    {{ producto.presentacion}}
+    {{ producto.precio}}
+    {{ producto.marca}}
+    <img src="{{ producto.image.url}}" alt="">
+    
+
+    </h1>
+</h1>
+
+{% endfor %}
+</section>
+
+
+
+
+
+  <script src="./js/app.js"></script>
+
 
 {% endblock%} 
 
-{% block contacto %}
-{% endblock%} 
