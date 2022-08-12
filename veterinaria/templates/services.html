@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 
+{% block estilosextras %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/services.css' %}">
+{% endblock %}
 
 {% block hero %}
 
@@ -12,7 +16,9 @@
 
   <!-- Tarjetas de servicios :v  -->
   <section class="tarjetas">
-    <h2>“Ser veterinario no es solo cuidar a los animales,<br> es ante todo respetar la vida de todos <br>los que habitamos en este mundo <br>y <br>dignificar su existencia.”</h2>
+    <div class="texto">
+        <p>“Ser veterinario no es solo cuidar a los animales,<br> es ante todo respetar la vida de todos <br>los que habitamos en este mundo <br>y dignificar su existencia.”</p>
+    </div>
     <div class="container">
         <div class="card">
             <div class="img">
@@ -23,7 +29,7 @@
                 <p>Especializados en todo tipo de casos</p>
             </div>
             <div class="bottom-text">
-                <div class="text">En clinica veterinaria Victor's <br> cualquier tipo de consulta <br>en mascotas y animales de granja</div>
+                <div class="text">En clínica veterinaria Victor's <br> cualquier tipo de consulta <br>en mascotas y animales de granja</div>
             </div>
         </div>
         <div class="card">
@@ -31,7 +37,7 @@
                 <img src="../static/img/clinic.jpeg" alt="clinica">
             </div>
             <div class="top-text">
-                <div class="name">Clinica</div>
+                <div class="name">Clínica</div>
             </div>
             <div class="bottom-text">
                 <div class="text">Parto <br>Manejo <br>Nutrición</div>
@@ -42,10 +48,10 @@
                 <img src="../static/img/cirugia.jpg" alt="cirugia">
             </div>
             <div class="top-text">
-                <div class="name">Cirugia</div>
+                <div class="name">Cirugía</div>
             </div>
             <div class="bottom-text">
-                <div class="text">Gastostomia <br>Esterilizacion canina y felina <br>Orquiectomia</div>
+                <div class="text">Gastostomía <br>Esterilización canina y felina <br>Orquiectomía</div>
             </div>
         </div>
         
@@ -68,25 +74,72 @@
 </sectio>
 
 <section class="inseminacion">
-    <div class="descrip">
-        <h3>Inseminación</h3>
-        <h4>Contamos con la mejor seleccion genetica <br>para enceminacion artificial en vacas y cerdas.<br>Asi como monta natural</h4>
-    </div>
-    <div class="slider">
-        <ul>
-            <li><img src="../static/img/12-Clasico.jpg" alt="Clasico"> </li>
-            <li><img src="../static/img/12-Payo.jpg" alt="Payo"></li>
-            <li><img src="../static/img/17-Shannon.jpg" alt="Shanonn"></li>
-            <li><img src="../static/img/18-Charbrey-50.jpg" alt="18-Charbrey-50"></li>
-            <li><img src="../static/img/holstein.jpg" alt="holstein"></li>
-            <li><img src="../static/img/jersey.jpg" alt="jersey"></li>
+    <div class="contenedor">
+		<main class="contenido-principal">
+		
+			<div class="contenido-principal__contenedor">
+				<h1 class="contenido-principal__titulo">Inseminación</h1>
+			</div>
+		</main>
 
-        </ul>
-    </div>
+
+		<div class="carousel">
+			<div class="carousel__contenedor">
+				<button aria-label="Anterior" class="carousel__anterior">
+					<i class="fas fa-chevron-left"></i>
+				</button>
+
+				<div class="carousel__lista">
+					<div class="carousel__elemento">
+						<img src="../static/img/12-Payo.jpg" alt="Clasico">
+						<p>Clásico</p>
+					</div>
+					<div class="carousel__elemento">
+						<img src="../static/img/12-Payo.jpg" alt="Payo">
+						<p>Payo</p>
+					</div>
+					<div class="carousel__elemento">
+						<img src="../static/img/17-Shannon.jpg" alt="Shannon">
+						<p>Shannon</p>
+					</div>
+					<div class="carousel__elemento">
+						<img src="../static/img/18-Charbrey-50.jpg" alt="Charbrey">
+						<p>Charbrey</p>
+					</div>
+	
+					<div class="carousel__elemento">
+						<img src="../static/img/holstein.jpg" alt="holstein">
+						<p>Holstein</p>
+					</div>
+					<div class="carousel__elemento">
+						<img src="../static/img/jersey.jpg" alt="jersey">
+						<p>Jersey</p>
+					</div>
+				</div>
+
+				<button aria-label="Siguiente" class="carousel__siguiente">
+					<i class="fas fa-chevron-right"></i>
+				</button>
+			</div>
+
+			<div role="tablist" class="carousel__indicadores"></div>
+		</div>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+	<script src="js/app.js"></script>
 </section>
 
 
-
+    <form method="post">
+        {% csrf_token %}
+        <label for="name">Nombre</label>
+        <br>
+        <input type="text" id="name" name="name">
+        <br>
+        <input type="submit" value="Guardar">
+    </form>
 
   <script src="./js/app.js"></script>
 

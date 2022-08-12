@@ -3,10 +3,85 @@
 
 {% block hero %}
 
+{% block estilosextras %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/contactos.css' %}">
+{% endblock %}
+
 <section id="hero" style="background-image: url('../static/img/contactoooo.jpg')">
     <div class="hero container">
         <h1>Contacto<span></span></h1>
       
+    </div>
+  </section>
+  <h2 class="desc">Visitenos en nuestras instalaciones</h2>
+
+  <section class="contac">
+    <div class="box">
+      <div class="container">
+        <main class="grid">
+          <article>
+            <div class="text">
+              <h3>⏰ Horarios</h3>
+      
+              <p>Nuestros horarios de servicios son:<br> Lunes a Viernes <br>De 8:00 am a 8:pm <br> Sabados de 9:00 am a 5:00 pm </p>
+              
+            </div>
+          </article>
+                                                                                                                                                        
+          <article>
+        <div class="text">
+              <h3>☎️ Telefono</h3>
+              <p>Comuniquese con nosotros a los números. <br>247 101 0834 <br>247 131 3020 </p>
+            </div>
+          </article>
+          <article>
+          
+            <div class="text">
+              <h3>📍 Ubicación</h3>
+              <p>Nos ubicamos a paso de carretera <br> en la comunida de San Jose Xicohtencalt, Huamantla </p>
+              <p>Av Xicohtencalt #</p>
+            </div>
+          </article>
+          <article>
+            <div class="text">
+              <h3>📧 Correo electrónico</h3>
+              <p>veterinariavictor09@gmail.com</p>
+          </article>
+          
+        </main>
+      </div>
+      </div>
+  </section>
+
+  <section class="medicos">
+    <H2>Equipo veterinario</H2>
+    <div class="a-box">
+      <div class="img-container">
+        <div class="img-inner">
+          <div class="inner-skew">
+            <img src="../static/img/mvz.jpeg">
+          </div>
+        </div>
+      </div>
+      <div class="text-container">
+        <h3>MVZ.Victor Rojas Sanchez</h3>
+        <div>
+      </div>
+    </div>
+
+    <div class="a-box">
+      <div class="img-container">
+        <div class="img-inner">
+          <div class="inner-skew">
+            <img src="../static/img/ya.jpeg">
+          </div>
+        </div>
+      </div>
+      <div class="text-container">
+        <h3>MVZ.Yabin Emanuel Rodriguez Rojas</h3>
+        <div>
+      </div>
     </div>
   </section>
 
