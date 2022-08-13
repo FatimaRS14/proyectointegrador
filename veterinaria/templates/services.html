@@ -168,22 +168,21 @@
 </section>
 
 
-    <form method="post">
-        {% csrf_token %}
-        <label for="name">Nombre</label>
-        <br>
-        <input type="text" id="name" name="name">
-        <br>
-        <label for="name">Numero telefonico</label>
-        <br>
-        <label for="name">Direccion</label>
-        <br>
-        <label for="name">Mascota</label>
-        <br>
-        <label for="name">Descripcion</label>
-        <br>
-        <input type="submit" href="mailto:faty.aome.rojas14@gmail.com" value="Guardar">
+<section class="contacto"></section>
+<div class="contacto">
+    <h3 id="contacto" class="titulo">Registra tu consulta</h3>
+    <form class="formulario" action="https://formspree.io/f/mdojozob" method="POST">
+        <input type="text" placeholder="Nombre" name="nombre" required>
+        <input type="fecha" placeholder="Fecha" name="fecha" required>
+        <input type="hora" placeholder="Hora" name="hora" required>
+        <input type="domicilio" placeholder="Domicilio" name="domicilio" required>
+        <input type="telefono" placeholder="Telefono" name="telefono" required>
+        <input type="especie" placeholder="Especie" name="especie" required>
+        <textarea name="Descripcion" placeholder="Descripcion"></textarea>
+        <input class="boton" href="mailto:veterinariavictor09@gmail.com" type="submit" value="Enviar">
     </form>
+</div>
+</section>
 
   <script src="./js/app.js"></script>
 
