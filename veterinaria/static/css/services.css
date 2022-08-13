@@ -16,18 +16,21 @@
     line-height: 30px;
     width: 80%;
     margin: 40px auto 60px auto;
-    padding: 30px;
+    padding: 15px;
     text-align: center;
 }
-.container{
+.containers{
     display: flex;
     align-items: center;
     justify-content: space-around;
-}
+    min-height: 70vh;
+    width: 100%;
+
+    }
 .card{
     height: 290px;
     width: 350px;
-    margin: 0 20px;
+    margin: 0 10px;
     background: white;
     transition: 0.4s;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
@@ -55,9 +58,9 @@
     text-align: center;
 }
 .card .top-text p{
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 600;
-    color: #e74c3c;
+    color: #a59610d8;
     line-height: 20px;
     text-align: center;
 
@@ -88,125 +91,84 @@
         margin: 20px 0;
     }
 }
+/*Fin de las cards de la parte de servicios*/
 
+/*Inicio de las cards de la parte de inseminacion*/
 .inseminacion {
-    background: #1D1D1F;
-	color: #fff;
-	font-family: 'Montserrat', sans-serif;
-	min-height: 100vh;
-	display: flex;
-	align-items: center;
     padding: 20px;
+  font-family: sans-serif;
+  background: #0c0303;
+}
+img {
+  width: 100%; /* need to overwrite inline dimensions */
+  height: auto;
+}
+h2 {
+  margin-bottom: .5em;
+  font-size: 25px;
+  background-position: center;
+  color: rgb(241, 246, 248);
+
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1em;
 }
 
- .contenedor {
-	max-width: 1200px;
-	width: 90%;
-	margin: auto;
+
+/* hover styles */
+.location-listing {
+  position: relative;
 }
 
-/* --- --- CONTENEDOR PRINCIPAL --- --- */
-
- .contenido-principal {
-	margin-bottom: 50px;
-	display: flex;
-	align-items: center;
+.location-image {
+  line-height: 0;
+  overflow: hidden;
 }
 
-  .contenido-principal__imagen {
-	vertical-align: top;
-	margin-right: 20px;
-	width: 50%;
-	max-width: 550px;
+.location-image img {
+  filter: blur(0px);
+  transition: filter 0.3s ease-in;
+  transform: scale(1.1);
 }
 
-.contenido-principal__contenedor {
-	width: 50%;
+.location-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+  z-index: 1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity .5s;
+  background: rgba(90,0,10,0.4);
+  color: white;
+  
+  /* position the text in t’ middle*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.contenido-principal__titulo {
-	font-weight: normal;
-	font-size: 30px;
-	text-align:end;
+.location-listing:hover .location-title {
+  opacity: 1;
 }
 
-.contenido-principal__resumen {
-	font-family: 'Open Sans', sans-serif;
-	line-height: 30px;
-	color: #CFCFCF;
+.location-listing:hover .location-image img {
+  filter: blur(2px);
 }
 
-/* --- --- CAROUSEL --- --- */
 
-
- .carousel__contenedor {
-	position: relative;
-}
-
-.carousel__anterior,
-.carousel__siguiente {
-	position: absolute;
-	display: block;
-	width: 30px;
-	height: 30px;
-	border: none;
-	top: calc(50% - 35px);
-	cursor: pointer;
-	line-height: 30px;
-	text-align: center;
-	background: none;
-	color: #fff;
-	opacity: 20%;
-}
-
-.carousel__anterior:hover,
-.carousel__siguiente:hover {
-	opacity: 100%;
-}
-
-.carousel__anterior {
-	left: -30px;
-}
-
-.carousel__siguiente {
-	right: -30px;
-}
-
-.carousel__lista {
-	overflow: hidden;
-}
-
-.carousel__elemento {
-	text-align: center;
-}
-
-.carousel__indicadores .glider-dot {
-	display: block;
-	width: 30px;
-	height: 4px;
-	background: #fff;
-	opacity: .2;
-	border-radius: 0;
-}
-
-.carousel__indicadores .glider-dot:hover {
-	opacity: .5;
-}
-
-.carousel__indicadores .glider-dot.active {
-	opacity: 1;
-}
-
-@media screen and (max-width: 800px) {
-	body {
-		padding: 40px 0;
-	}
-
-	.contenido-principal {
-		flex-direction: column;
-	}
-
-	.contenido-principal > * {
-		width: 100%;
-	}
+/* for touch screen devices */
+@media (hover: none) { 
+  .location-title {
+    opacity: 1;
+  }
+  .location-image img {
+    filter: blur(2px);
+  }
 }

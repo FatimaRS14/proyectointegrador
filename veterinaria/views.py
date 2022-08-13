@@ -28,6 +28,4 @@ def sesion(request):
 def registro(request):
     return render(request, "registro.html")
 
-def produc(request):
-    productos = Producto.objects.all()
-    return render(request, 'productos.html', {'productos': productos})
+

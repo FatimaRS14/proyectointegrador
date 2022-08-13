@@ -3,6 +3,7 @@
 {% block estilosextras %}
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/services.css' %}">
+<link rel="stylesheet" href="{% static 'css/carousel.css' %}">
 {% endblock %}
 
 {% block hero %}
@@ -19,7 +20,7 @@
     <div class="texto">
         <p>“Ser veterinario no es solo cuidar a los animales,<br> es ante todo respetar la vida de todos <br>los que habitamos en este mundo <br>y dignificar su existencia.”</p>
     </div>
-    <div class="container">
+    <div class="containers">
         <div class="card">
             <div class="img">
                 <img src="../static/img/consulta.jpeg" alt="consulta">
@@ -56,7 +57,7 @@
         </div>
         
     </div>
-    <div class="container">
+    <div class="containers">
         <div class="card">
             <div class="img">
                 <img src="../static/img/vacunacion.png" alt="vacunacion">
@@ -72,63 +73,98 @@
     </div>
     
 </sectio>
+<!--Catalogo de inseminacion-->
 
 <section class="inseminacion">
-    <div class="contenedor">
-		<main class="contenido-principal">
-		
-			<div class="contenido-principal__contenedor">
-				<h1 class="contenido-principal__titulo">Inseminación</h1>
-			</div>
-		</main>
+    <div class="child-page-listing">
 
-
-		<div class="carousel">
-			<div class="carousel__contenedor">
-				<button aria-label="Anterior" class="carousel__anterior">
-					<i class="fas fa-chevron-left"></i>
-				</button>
-
-				<div class="carousel__lista">
-					<div class="carousel__elemento">
-						<img src="../static/img/12-Payo.jpg" alt="Clasico">
-						<p>Clásico</p>
-					</div>
-					<div class="carousel__elemento">
-						<img src="../static/img/12-Payo.jpg" alt="Payo">
-						<p>Payo</p>
-					</div>
-					<div class="carousel__elemento">
-						<img src="../static/img/17-Shannon.jpg" alt="Shannon">
-						<p>Shannon</p>
-					</div>
-					<div class="carousel__elemento">
-						<img src="../static/img/18-Charbrey-50.jpg" alt="Charbrey">
-						<p>Charbrey</p>
-					</div>
-	
-					<div class="carousel__elemento">
-						<img src="../static/img/holstein.jpg" alt="holstein">
-						<p>Holstein</p>
-					</div>
-					<div class="carousel__elemento">
-						<img src="../static/img/jersey.jpg" alt="jersey">
-						<p>Jersey</p>
-					</div>
-				</div>
-
-				<button aria-label="Siguiente" class="carousel__siguiente">
-					<i class="fas fa-chevron-right"></i>
-				</button>
-			</div>
-
-			<div role="tablist" class="carousel__indicadores"></div>
-		</div>
-	</div>
-
-	<script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
-	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-	<script src="js/app.js"></script>
+        <h2 style="background-color: #ffff ,  background-position top center ">Inseminación</h2>
+        <h3>Contamos con la mejor seleccion genetica para la enseminacion artificial en vacas y cerdas <br> Asi como monta natura</h3>
+      
+        <div class="grid-container">
+      
+          <article id="3685" class="location-listing">
+      
+            <a class="location-title" href="#">
+                Clasico           </a>
+      
+            <div class="location-image">
+              <a href="#">
+                  <img width="300" height="169" src="../static/img/6.jpeg" alt="clasico">    </a>
+      
+            </div>
+      
+          </article>
+      
+          <article id="3688" class="location-listing">
+      
+            <a class="location-title" href="#">
+                Payo           </a>
+      
+            <div class="location-image">
+              <a href="#">
+                  <img width="300" height="169" src="../static/img/3.jpeg" alt="Payo">  </a>
+      
+            </div>
+      
+          </article>
+      
+          <article id="3691" class="location-listing">
+      
+            <a class="location-title" href="#">
+                Shannon        </a>
+      
+            <div class="location-image">
+              <a href="#">
+                  <img width="300" height="169" src="../static/img/5.jpeg" alt="Shannon">  </a>
+      
+            </div>
+      
+          </article>
+      
+          <article id="3694" class="location-listing">
+      
+            <a class="location-title" href="#">
+                Holstein           </a>
+      
+            <div class="location-image">
+              <a href="#">
+                  <img width="300" height="169" src="../static/img/2.jpeg" alt="Holstein">  </a>
+      
+            </div>
+      
+          </article>
+      
+          <article id="3697" class="location-listing">
+      
+            <a class="location-title" href="#">
+                Jersey          </a>
+      
+            <div class="location-image">
+              <a href="#">
+                  <img width="300" height="169" src="../static/img/1.jpeg" alt="Jersey">    </a>
+      
+            </div>
+      
+          </article>
+      
+          <article id="3700" class="location-listing">
+      
+            <a class="location-title" href="#">
+                Charbrey           </a>
+      
+            <div class="location-image">
+              <a href="#">
+                  <img width="300" height="169" src="../static/img/4.jpeg" alt="Charbrey">          
+                </a>
+            </div>
+      
+          </article>
+      
+        </div>
+        <!-- end grid container -->
+      
+      </div>
 </section>
 
 
@@ -138,7 +174,15 @@
         <br>
         <input type="text" id="name" name="name">
         <br>
-        <input type="submit" value="Guardar">
+        <label for="name">Numero telefonico</label>
+        <br>
+        <label for="name">Direccion</label>
+        <br>
+        <label for="name">Mascota</label>
+        <br>
+        <label for="name">Descripcion</label>
+        <br>
+        <input type="submit" href="mailto:faty.aome.rojas14@gmail.com" value="Guardar">
     </form>
 
   <script src="./js/app.js"></script>
