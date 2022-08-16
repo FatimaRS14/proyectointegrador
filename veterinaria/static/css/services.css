@@ -1,6 +1,39 @@
 
 
 /*Inicio de las cards de la parte de servicios*/
+
+:root{
+  --white-text:rgb(255, 255, 255);
+  --background:#c8e8f1;
+  --black-text:rgb(68, 66, 66)    
+  --prueba: (180deg,#21c8f6,#637bff);
+}
+
+.background1-left-column{
+  background: linear-gradient(180deg,#32cd32,#228b22);
+}
+
+
+.background2-left-column{
+  background: linear-gradient(180deg ,#ffff00, #ffd700);
+}
+
+.background3-left-column{
+background: linear-gradient(180deg, #cd853f, #8b4513);
+}
+
+.background4-left-column{
+  background: linear-gradient(180deg, #d3d3d3, #696969);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  border: none;
+}
+
 #section .tarjetas{
     height: 100%;
     display: grid;
@@ -9,9 +42,9 @@
     text-align: center;
 }
 .texto {
-	color: #717D7E ;
+	  color: #4d3905 ;
     font-weight: 600;
-    font-size: 28px;
+    font-size: 20px;
     font-family: 'Merienda', cursive;
     line-height: 30px;
     width: 80%;
@@ -19,78 +52,96 @@
     padding: 15px;
     text-align: center;
 }
-.containers{
+.content{
+ 
     display: flex;
+    justify-content: center;
+    height: 100vh;
     align-items: center;
-    justify-content: space-around;
-    min-height: 70vh;
-    width: 100%;
+}
 
-    }
-.card{
-    height: 290px;
-    width: 350px;
-    margin: 0 10px;
-    background: white;
-    transition: 0.4s;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+.cardd {
+    background-color:var(--white-text);
+    border-radius: 1rem;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
+    display: flex;  
+    margin: 1.5rem;
+    overflow: hidden;
+    width: 80rem;
+    height: 30rem;
 }
-.card:hover{
-    height: 470px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-}
-.card .img{
-    height: 200px;
-    width: 100%;
-}
-.card .img img{
-    height: 200px;
-    width: 100%;
-    object-fit: cover;    
-}
-.card .top-text{
+
+.card h6 {
     padding: 5px;
+    font-size: small;
+    opacity: 0.4;   
+    letter-spacing: .1rem;
 }
-.card .top-text .name{
-    font-size: 28px;
-    font-weight: 600;
-    color: #202020;
-    text-align: center;
-}
-.card .top-text p{
-    font-size: 20px;
-    font-weight: 600;
-    color: #a59610d8;
-    line-height: 20px;
-    text-align: center;
 
+.card  h2 {
+    letter-spacing: .1rem;
+    margin: 1rem 0;
+    color: var(black-text);
 }
-.card .bottom-text{
-    padding: 0 20px 10px 20px;
-    margin-top: 5px;
-    background: white;
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.1s;
+
+.left-column {  
+    color: var(--white-text);
+    padding: 2rem;
+    max-width: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
-.card:hover .bottom-text{
-    opacity: 1;
-    visibility: visible;
+
+.left-column h2{
+    color: var(--white-text);
+    padding: 10px;
 }
-.card .bottom-text .text{
+
+.left-column i {
+    font-size: 5rem
+}
+
+.left-column img {
+    width: 100%;
+    height: auto;
+}
+
+.right-column {
+    padding: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    
+}
+.right-column h4{
+    padding: 5px;
+    font-size: small;
     text-align: center;
-    font-size: 18px;
+    text-transform: uppercase;
 }
-@media screen and (max-width: 978px){
+
+.right-column p{    
+    font-size: 1rem;
+    text-align: justify;
+    color: var(--black-text)
+}
+
+
+/*media queries*/
+
+@media (max-width: 1030px) {
     .container{
-        flex-wrap: wrap;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height:auto;
+        
     }
-    .card{
-        max-width: 700px;
-        margin: 20px 0;
-    }
-}
+  }
 /*Fin de las cards de la parte de servicios*/
 
 /*Inicio de las cards de la parte de inseminacion*/

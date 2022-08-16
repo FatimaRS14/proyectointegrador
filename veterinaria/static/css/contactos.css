@@ -1,12 +1,13 @@
   #section .visita{
     display: block;
-    font-size: 25px;
+    font-size: 50px;
     margin-block-start: 0.83em;
     margin-block-end: 0.83em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     font-weight: bold;
     color: #2645f5;
+    text-align: center;
   }
 
 /*Inicio de las cards de la parte de contactos*/
@@ -39,6 +40,7 @@
     width: 80%;
     margin: 40px auto 60px auto;
 	  padding: 0px;
+    text-align: center;
 
   }
   
@@ -112,7 +114,7 @@
   
   .a-box {
     display: inline-block;
-    width: 240px;
+    width: 640px;
     text-align: center;
   }
   
@@ -151,6 +153,7 @@
     margin: -120px 0px 0px 0px;
     line-height: 19px;
     font-size: 14px;
+    text-align: center;
   }
   
   .text-container h3 {

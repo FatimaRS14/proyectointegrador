@@ -3,29 +3,55 @@
 
 {% block hero %}
 
+{% block estilosextras %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/productos.css' %}">
+{% endblock %}
+
 <section id="hero" style="background-image: url('../static/img/serviciosss.jpg')">
     <div class="hero container">
         <h1>Productos<span></span></h1>
       
     </div>
   </section>
-<section>
-<h1>Contamos con una amplia variedad de productos para cada uno de los diferentes casos</h1>
-    {% for producto in productos %}
-<h1>
-    <h1>
-    <p>{{ producto.nombre}}</p>
-    {{ producto.presentacion}}
-    {{ producto.precio}}
-    {{ producto.marca}}
-    <img src="{{ producto.image.url}}" alt="">
-    
 
-    </h1>
-</h1>
+
+<section class="top-text">
+  <h1 class="txt">Contamos con una amplia variedad de productos <br> para cada uno de los diferentes casos.</h1>
+
+</section>
+
+
+    {% for producto in productos %}
+<section class="pro">
+ <h1 class="pro-pie">
+  <div class="cont">
+  <div class="targ">   
+    <div class="image">
+        <img src="{{ producto.image.url}}" alt="">
+    </div>
+    <div class="cuerpo">
+        <h2 class="desss">{{ producto.nombre}}</h2> 
+      </div>
+     <div> 
+        <p class="dess-crip">{{ producto.presentacion}}</p>
+        <p class="dess-crip"> {{ producto.presentacion}}</p>
+        <p class="dess-crip"> {{ producto.precio}}</p>
+        <p class="dess-crip">{{ producto.marca}}</p>
+        {% if producto.link %}
+      </div>
+   
+  </div>
+   
+      {% endif %}
+  
+
+</div>
+</section>
 
 {% endfor %}
-</section>
+
+
 
 
 

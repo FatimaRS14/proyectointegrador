@@ -1,12 +1,15 @@
 {% extends 'base.html' %}
 
+
+{% block hero %}
+
 {% block estilosextras %}
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/services.css' %}">
 <link rel="stylesheet" href="{% static 'css/carousel.css' %}">
 {% endblock %}
 
-{% block hero %}
+
 
 <section id="hero" style="background-image: url('../static/img/services.jpeg')">
     <div class="hero container">
@@ -15,64 +18,44 @@
     </div>
   </section>
 
-  <!-- Tarjetas de servicios :v  -->
   <section class="tarjetas">
-    <div class="texto">
-        <p>“Ser veterinario no es solo cuidar a los animales,<br> es ante todo respetar la vida de todos <br>los que habitamos en este mundo <br>y dignificar su existencia.”</p>
-    </div>
-    <div class="containers">
-        <div class="card">
-            <div class="img">
-                <img src="../static/img/consulta.jpeg" alt="consulta">
+    <p class="texto">“Ser veterinario no es solo cuidar a los animales,<br> es ante todo respetar la vida de todos <br>los que habitamos en este mundo <br>y dignificar su existencia.”</p>
+  </section>
+
+  <!-- Tarjetas de servicios :v  -->
+  {% for servicio in services %}
+  <section class="servicio">
+
+    <div class="content">
+        <div class="cardd">
+            <div class="left-column background1-left-column">
+                <h6>Servicios</h6>
+                <h2>{{ servicio.servicio}}</h2>
+                <img src="{{ servicio.image.url}}" alt="">
+                
             </div>
-            <div class="top-text">
-                <div class="name">Consultas</div>
-                <p>Especializados en todo tipo de casos</p>
-            </div>
-            <div class="bottom-text">
-                <div class="text">En clínica veterinaria Victor's <br> cualquier tipo de consulta <br>en mascotas y animales de granja</div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="img">
-                <img src="../static/img/clinic.jpeg" alt="clinica">
-            </div>
-            <div class="top-text">
-                <div class="name">Clínica</div>
-            </div>
-            <div class="bottom-text">
-                <div class="text">Parto <br>Manejo <br>Nutrición</div>
+
+            <div class="right-column">
+                <div>
+                    <h4>{{ servicio.descripcion}}</h4>
+                </div>
+                <p>{{ servicio.texto}}</p>
+                {% if servicio.link %}
             </div>
         </div>
-        <div class="card">
-            <div class="img">
-                <img src="../static/img/cirugia.jpg" alt="cirugia">
-            </div>
-            <div class="top-text">
-                <div class="name">Cirugía</div>
-            </div>
-            <div class="bottom-text">
-                <div class="text">Gastostomía <br>Esterilización canina y felina <br>Orquiectomía</div>
-            </div>
-        </div>
+   
+         
         
+     
     </div>
-    <div class="containers">
-        <div class="card">
-            <div class="img">
-                <img src="../static/img/vacunacion.png" alt="vacunacion">
-            </div>
-            <div class="top-text">
-                <div class="name">Vacunación</div>
-                <p>Nos preocupamos por el bienestar de sus animales por eso...</p>
-            </div>
-            <div class="bottom-text">
-                <div class="text">Contamos con el esquema de vacunación completo para sus perros y vacas</div>
-            </div>
-        </div>
-    </div>
-    
-</sectio>
+     
+        {% endif %}
+
+
+</section>
+
+{% endfor %}
+  
 <!--Catalogo de inseminacion-->
 
 <section class="inseminacion">
@@ -168,7 +151,7 @@
 </section>
 
 
-<section class="contacto"></section>
+<section class="contacto">
 <div class="contacto">
     <h3 id="contacto" class="titulo">Registra tu consulta</h3>
     <form class="formulario" action="https://formspree.io/f/mdojozob" method="POST">
@@ -183,6 +166,8 @@
     </form>
 </div>
 </section>
+
+
 
   <script src="./js/app.js"></script>
 

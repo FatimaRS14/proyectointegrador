@@ -1,5 +1,5 @@
 from django.shortcuts import render, HttpResponse
-from .models import Producto
+from .models import Producto, Servicio
 
 def home(request):
     return render(request, 'home.html')
@@ -8,15 +8,10 @@ def contacto(request):
     return render(request, "contacto.html")
 
 def services(request):
-    if request.method == 'GET':
-        return render(request, "services.html")
+     services = Servicio.objects.all()
+     return render(request, 'services.html', {'services': services})
 
-    if request.method == 'POST':
-        name = request.POST['name']
-        print(name)
-        #cita = Cita(name, telefno)
-        #cita.save()
-        return render(request, "services.html")
+    
 
 def productos(request):
     productos = Producto.objects.all()
