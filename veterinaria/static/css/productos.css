@@ -1,4 +1,4 @@
- #section .top-text{
+#section .top-text{
     height: 100%;
     display: grid;
     place-items: center;
@@ -26,14 +26,14 @@
         background-color: #f7f8fc;
         font-family: "Roboto", sans-serif;
         color: #10182f;
-        flex-wrap: nowrap
+        flex-wrap: nowrap;
       }
   
     .cont {
         display: flex;
         width: 1040px;
         justify-content: space-evenly;
-        flex-wrap: nowrap
+        flex-wrap: nowrap;
 
       }
       .targ {
@@ -49,13 +49,13 @@
         height: 255px;
         object-fit: cover;
       }
-      .cuerpoy {
+      .cuerpo {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
         padding: 20px;
-        min-height: 250px;
+        min-height: 50px;
       }
       
       .dess {
@@ -70,6 +70,7 @@
       }
       .dess-crip {
         background-color: #47bcd4;
+        padding: 4px;
       }
      
       
